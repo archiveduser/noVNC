@@ -15,6 +15,8 @@
     Connect parameters are provided in query string:
         http://example.com/?host=HOST&port=PORT&scale=true
     -->
+    <meta charset="UTF-8">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
     <title>noVNC</title>
 
     <style>
@@ -24,6 +26,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            min-width: 720px;
         }
 
         html {
@@ -83,6 +86,7 @@
         // RFB holds the API to connect and communicate with a VNC server
         import RFB from './core/rfb.js';
         import Keyboard from "../core/input/keyboard.js";
+        import KeyTable from "../core/input/keysym.js";
         import keysyms from "../core/input/keysymdef.js";
 
         import {
